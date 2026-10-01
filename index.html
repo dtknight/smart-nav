@@ -741,7 +741,7 @@
 
         function loadFriendLinks() {
             const container = document.getElementById('friend-links-container'); let linksStr = localStorage.getItem('nav_friend_links'); let links = linksStr ? JSON.parse(linksStr) : []; container.innerHTML = '';
-            if(links.length === 0) { links = [ { name: "骑士影视", url: "https://qsys.eu.cc" }, { name: "切师傅导航", url: "https://www.118341.xyz" } ]; }
+            if(links.length === 0) { links = [ { name: "骑士影视", url: "https://qsys.eu.cc" }, { name: "骑士影视TV", url: "https://tv.qisys.ggff.net" } ]; }
             links.forEach((item, index) => {
                 const displayName = getLocalizedLinkName(item.name, item.url);
                 container.innerHTML += `
@@ -751,7 +751,7 @@
                     </div>`;
             });
         }
-        function deleteFriendLink(e, index) { e.preventDefault(); e.stopPropagation(); let linksStr = localStorage.getItem('nav_friend_links'); let links = linksStr ? JSON.parse(linksStr) : []; if(links.length === 0) { links = [ { name: "骑士影视", url: "https://qsys.eu.cc" }, { name: "切师傅导航", url: "https://www.118341.xyz" } ]; } links.splice(index, 1); localStorage.setItem('nav_friend_links', JSON.stringify(links)); loadFriendLinks(); }
+        function deleteFriendLink(e, index) { e.preventDefault(); e.stopPropagation(); let linksStr = localStorage.getItem('nav_friend_links'); let links = linksStr ? JSON.parse(linksStr) : []; if(links.length === 0) { links = [ { name: "骑士影视", url: "https://qsys.eu.cc" }, { name: "骑士影视TV", url: "https://tv.qisys.ggff.net" } ]; } links.splice(index, 1); localStorage.setItem('nav_friend_links', JSON.stringify(links)); loadFriendLinks(); }
 
         // --- 初始化运转 ---
         document.addEventListener('click', () => { document.getElementById('engine-menu').classList.add('hidden'); document.getElementById('theme-panel').classList.add('hidden'); });
